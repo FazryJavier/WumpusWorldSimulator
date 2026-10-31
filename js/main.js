@@ -6,13 +6,13 @@ import { createRecords } from "./app/records.js";
 import { createSettings } from "./app/settings.js";
 import { decodeShare, encodeShare } from "./app/share.js";
 import { createStorage, STORAGE_KEYS } from "./app/storage.js";
-import { loadImages } from "./ui/assets.js";
 import { createAudio } from "./ui/audio.js";
 import { createDialogs } from "./ui/dialogs.js";
 import { createHud } from "./ui/hud.js";
 import { createI18n } from "./ui/i18n.js";
 import { createInput } from "./ui/input.js";
 import { createRenderer } from "./ui/renderer.js";
+import { buildSprites } from "./ui/sprites.js";
 
 const $ = (sel) => document.querySelector(`[data-js="${sel}"]`);
 const NOTE_MARKERS = { safe: "safe", pit: "pit-maybe", wumpus: "wumpus-maybe" };
@@ -67,7 +67,7 @@ async function boot() {
     const canvas = $("board");
     let images;
     try {
-        images = await loadImages();
+        images = buildSprites();
     } catch (err) {
         console.error(err);
         $("board-error").hidden = false;
