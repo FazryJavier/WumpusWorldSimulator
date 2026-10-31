@@ -1,0 +1,126 @@
+/* Token desain (DESIGN_SYSTEM §2–§6). Komponen hanya memakai variabel di file ini. */
+:root {
+    color-scheme: dark;
+    --color-bg: #0f1117;
+    --color-surface: #181b24;
+    --color-surface-2: #20242f;
+    --color-border: #2c3140;
+    --color-text: #e8e6e1;
+    --color-text-muted: #9a9fae;
+    --color-accent: #f2b84b;
+    --color-accent-text: #f2b84b;
+    --color-on-accent: #1a1406;
+    --color-breeze: #5cc8e8;
+    --color-stench: #a3d65c;
+    --color-glitter: var(--color-accent);
+    --color-danger: #ef5f57;
+    --color-safe: #4ccf8e;
+    --color-scream: #c58af9;
+    --color-focus: #f2b84b;
+    --color-scrim: rgb(5 6 10 / 0.6);
+    --color-grid: rgb(128 128 128 / 0.5);
+    --color-tile-badge: rgb(10 12 18 / 0.75);
+
+    --font-display: "Press Start 2P", ui-monospace, monospace;
+    --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-pill: 999px;
+
+    --shadow-1: 0 1px 2px rgb(0 0 0 / 0.3);
+    --shadow-2: 0 10px 30px rgb(0 0 0 / 0.35);
+
+    --z-board-overlay: 10;
+    --z-header: 100;
+    --z-coachmark: 200;
+    --z-modal: 1000;
+    --z-toast: 1100;
+
+    --dur-fast: 120ms;
+    --dur-base: 200ms;
+    --dur-slow: 400ms;
+    --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-width: 320px;
+    --content-max: 1200px;
+    --touch-target: 44px;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --color-bg: #f4f1ea;
+    --color-surface: #ffffff;
+    --color-surface-2: #f7f5f0;
+    --color-border: #e2ddd2;
+    --color-text: #1f2128;
+    --color-text-muted: #5d6270;
+    --color-accent: #b7791f;
+    --color-accent-text: #8a5a12;
+    --color-on-accent: #ffffff;
+    --color-breeze: #1f7fa3;
+    --color-stench: #4d7c0f;
+    --color-danger: #c53030;
+    --color-safe: #2f855a;
+    --color-scream: #7c3aed;
+    --color-focus: #8a5a12;
+    --color-scrim: rgb(20 18 12 / 0.45);
+    --shadow-1: 0 1px 2px rgb(0 0 0 / 0.08);
+    --shadow-2: 0 10px 30px rgb(0 0 0 / 0.12);
+}
+
+@media (prefers-color-scheme: light) {
+    :root[data-theme="system"] {
+        color-scheme: light;
+        --color-bg: #f4f1ea;
+        --color-surface: #ffffff;
+        --color-surface-2: #f7f5f0;
+        --color-border: #e2ddd2;
+        --color-text: #1f2128;
+        --color-text-muted: #5d6270;
+        --color-accent: #b7791f;
+        --color-accent-text: #8a5a12;
+        --color-on-accent: #ffffff;
+        --color-breeze: #1f7fa3;
+        --color-stench: #4d7c0f;
+        --color-danger: #c53030;
+        --color-safe: #2f855a;
+        --color-scream: #7c3aed;
+        --color-focus: #8a5a12;
+        --color-scrim: rgb(20 18 12 / 0.45);
+        --shadow-1: 0 1px 2px rgb(0 0 0 / 0.08);
+        --shadow-2: 0 10px 30px rgb(0 0 0 / 0.12);
+    }
+}
+
+:root[data-colorblind="true"] {
+    --color-safe: #4c9fe8;
+    --color-danger: #f28c28;
+    --color-stench: #e7d84b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --dur-fast: 0ms;
+        --dur-base: 0ms;
+        --dur-slow: 0ms;
+    }
+}
+
+:root[data-reduce-motion="true"] {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+}

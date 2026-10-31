@@ -1,0 +1,53 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    width: 100%;
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: var(--space-5) var(--space-4) var(--space-8);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--sidebar-width);
+    gap: var(--space-5);
+    align-items: start;
+}
+
+.board-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0;
+}
+
+/* --bp-lg: di bawah 900 px sidebar pindah ke bawah papan */
+@media (max-width: 899px) {
+    .main {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* --bp-md: 600–899 px, sidebar dua kolom */
+@media (min-width: 600px) and (max-width: 899px) {
+    .sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* --bp-sm: ponsel */
+@media (max-width: 599px) {
+    .main {
+        padding: var(--space-3) var(--space-4) var(--space-6);
+        gap: var(--space-3);
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "name": "wumpus-world-simulator",
+    "version": "2.0.0",
+    "description": "Browser-based Wumpus World (AIMA ch. 7) with a pure deterministic engine and an explainable logic-based AI agent.",
+    "type": "module",
+    "private": true,
+    "license": "MIT",
+    "author": "Fazry Javier",
+    "homepage": "https://github.com/FazryJavier/WumpusWorldSimulator#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/FazryJavier/WumpusWorldSimulator.git"
+    },
+    "engines": {
+        "node": ">=20"
+    },
+    "scripts": {
+        "start": "node server.cjs",
+        "test": "node --test",
+        "test:coverage": "node --test --experimental-test-coverage",
+        "lint": "eslint .",
+        "format": "prettier --write .",
+        "bench:agent": "node scripts/bench-agent.js"
+    },
+    "devDependencies": {
+        "@eslint/js": "9.39.1",
+        "eslint": "9.39.1",
+        "globals": "16.5.0",
+        "prettier": "3.6.2"
+    }
+}
