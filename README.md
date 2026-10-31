@@ -35,7 +35,15 @@ Open http://localhost:8080. ES modules do not run from `file://`, so always use 
 | `npm run test:coverage` | Tests with a coverage report |
 | `npm run lint` | ESLint, including layer-boundary rules |
 | `npm run bench:agent` | Benchmark the AI agent on seeds 1…1000 per mode |
+| `npm run build` | Copy the runtime files (`index.html`, `css/`, `js/`, `img/`, `i18n/`) and a `_headers` file into `dist/` |
 | `node scripts/build-icons.js` | Regenerate `img/favicon.svg` from the Wumpus sprite |
+
+## Deploying to Cloudflare Pages
+
+Connect the repository in **Workers & Pages → Create → Pages → Connect to Git**. `wrangler.jsonc` sets the output directory to `dist/`, so use:
+
+- **Build command:** `npm run build`
+- **Build output directory:** `dist`
 
 ## Architecture
 

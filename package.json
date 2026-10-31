@@ -16,6 +16,7 @@
     },
     "scripts": {
         "start": "node server.cjs",
+        "build": "node scripts/build.js",
         "test": "node --test",
         "test:coverage": "node --test --experimental-test-coverage",
         "lint": "eslint .",
