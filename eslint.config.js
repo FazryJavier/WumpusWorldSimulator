@@ -8,7 +8,7 @@ const PURE_GLOBALS_BAN = ["window", "document", "localStorage", "navigator"].map
 const NO_RANDOM = { object: "Math", property: "random", message: "Gunakan engine/rng.js." };
 
 export default [
-    { ignores: ["node_modules/**", "docs/design/**", "coverage/**"] },
+    { ignores: ["node_modules/**", "docs/design/**", "coverage/**", "dist/**"] },
     js.configs.recommended,
     {
         files: ["js/**/*.js"],
